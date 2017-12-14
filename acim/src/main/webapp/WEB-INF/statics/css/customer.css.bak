@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mainpanel_noLeft{margin-left:0px;}
+.mainpanel_noLeft .headerbar .logopanel {
+    width: auto;
+}
+/*头部样式*/
+.headerbar{height:50px}
+.headermenu .dropdown-menu-usermenu{min-width:100px}
+.headermenu .dropdown-menu.pull-right {
+    left: auto;
+    right: auto;
+}
+.headermenu > li {border-left: 0px}
+.headermenu button.dropdown-toggle{line-height:25px}
+
+.headermenu .dropdown-toggle:hover,
+.headermenu .dropdown-toggle:focus,
+.headermenu .dropdown-toggle:active,
+.headermenu .dropdown-toggle.active,
+.headermenu .open .dropdown-toggle.dropdown-toggle {
+    background-color: rgba(0,0,0,0.1);
+	background-color: #2a6496\9;
+    color: #fff;
+}
+.headermenu .chat-icon:hover {
+    background-color: rgba(0,0,0,0.1);
+	background-color: #2a6496\9;
+}
+.menutoggle:hover {
+    background-color: rgba(0,0,0,0.1);
+    border-right-color: rgba(255,255,255,0.15);
+	background-color: #2a6496\9;
+    color: #fff;
+}
+
+.pageTop li {font-size: 14px;}
+.pageTop li a {font-size: 14px;}
+.pageTop li span.num { color:#F00;}
+.subtitle {font-size: 16px;margin-bottom: 10px;margin-top: 0; line-height: 30px;}
+.subtitle .gridBtnGroup { float:right;}
+.subtitle .gridBtnGroup .form-group {margin-right:0; margin-left:5px}
+
+/*.alert_password .modal-content{width:400px;}
+.alert_password .modal-body{height:300px;}*/
+
+/* 表单样式*/
+#moreSearch{margin-right:10px}
+#moreSearch .glyphicon{ padding:0 0 0 7px}
+.pageheader .glyphicon{ 
+	border : 0px;
+    font-size: 13px;
+    margin-right: 0px;
+}
+.pageheader .btn-group{margin-bottom:0px}
+.pageheader .ckbox label, .pageheader .rdio label {
+    margin-bottom: 0px !important;
+}
+.modal-body .row{margin-bottom:10px;}
+.modal-body .form-inline .form-group{vertical-align:auto}
+.modal-body .form-group .form-control {
+    padding: 5px;
+}
+
+.tabToggleBtn{margin:auto}
+.toggle_ism_info{display:inline-block; margin-top:8px}
+.form-inline .rdio{margin-top:4px;}
+.diyNum , .xzPrice , .xzNum , .muchSel , .oneSel {display:none}
+.lineNull{display:block; height:10px}
+.glyphicon-star.icon-noSave{color:#CCC}
+.glyphicon-star.icon-save{color:#428bca}
+.comm_red{color:#F00; display:inline-block; margin-right:30px}
+.button_hide{display:none}
+a.link_icon{font-size:17px;}
+a.link_icon:hover{text-decoration:none}
+tr.tab_tr_total td{background: #fff none repeat scroll 0 0;   font-weight: bold; display:none}
+tr.tab_tr_total_nav td{background: #fff none repeat scroll 0 0;   font-weight: bold;}
+.filemanager-options li a{color:#428bca !important}
+.filemanager-options li a:hover{text-decoration:none;}
+.inlineInput{display:none; width:100px;}
+a.save_inlineLink{display:none}
+
+ .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control {
+    width: auto;
+  }
+  .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+  
+  /*弹出窗口*/
+  .modal-dialog {
+    width: 600px;
+    margin: 8% auto auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+  .modal-lg {
+    width: 900px;
+  }
+  .modal-dialog.addPolicy {
+    margin: 2% auto auto;
+  }
+  
+  /*单选多选IE8样式*/
+.ckbox label:before , .rdio label:before {
+    border: 0px\9;
+	background: none\9;
+}
+/*翻页样式*/
+.tabFooterDom{text-align:center}
+.tabFooterDom .dataTables_paginate {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    margin-right: 10px;
+    text-align: center;
+}
+.tabFooterDom .dataTables_info {
+    display: inline-block;
+    float: none;
+    height: 30px;
+    line-height: 24px;
+    overflow: hidden;
+}
+.width70{width:70px;}
+.width80{width:80px;}
+.width90{width:90px;}
+.width100{width:100px;}
+.width110{width:110px;}
+
+
+
+
+
+
+
