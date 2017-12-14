@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- <link rel="shortcut icon" href="../images/favicon.png" type="image/png"> -->
+<link rel="stylesheet" href="../../statics/css_wz/miracles.css" th:href="@{/css_wz/miracles.css}" type='text/css'></link>
+<link rel="stylesheet" href="../../statics/css_wz/main-head-menu.css" th:href="@{/css_wz/main-head-menu.css}"	type='text/css'></link>
+<link rel="stylesheet" href="../../statics/css_wz/font-awesome.min.css" th:href="@{/css_wz/font-awesome.min.css}" type="text/css">
+<link rel="stylesheet" href="../../statics/css_wz/menu.css" media="screen"  th:href="@{/css_wz/menu.css}" type="text/css" /><link rel="stylesheet" href="../css_wz/leftnav.css" media="screen"  th:href="@{/css_wz/leftnav.css}" type="text/css" />
+
+<title>修行网站</title>
+
+
+
+</head>
+
+<body class='main_section'>
+    <input type='text' value='miracles_text'  style='display:none;' id="bookId" />
+	<section>
+		<div class="global_linker">
+
+        <!--     <div  class='global_linker_right'> <!--global_linker_right -->
+			  <ul  class="menu">
+				  <li> <a href="#"> </a></li>
+
+				  <Li> <a id="login_user"> 仙子</a>
+				     <ul>
+						 <li><a>aa</a></li>
+
+						 <li><a>aa</a></li>
+						 <li><a>aa</a></li>
+						 <li><a>aa</a></li>
+					 </ul>
+				  </Li>
+				  <li>
+					 <a id="system_set">上传</a>
+				  </li>
+				  <li>
+					<a id="logout"></a>
+				  </li>
+			  </ul>
+                  
+         <!--    </div> -->
+             <div class="global_linker_left">
+             
+             </div>
+	
+		</div>
+		<!--  end global_linker  -->
+
+		<div class="global_header">
+
+			<ul class="nav-list">
+				<li><a href="#">奇迹课程<span class="trig"></span></a>
+				    <ul id="miracles">
+				    	<li><a  id='miracles_text' isAll="true" bookName ='miracles_text' bookType='excel'>正文</a></li>
+						<li><a  id="miracles_bookwork" isAll ="true" bookName='miracles_bookwork' bookType='excel'>练习</a></li>
+						<li><a  id='miracles_manualForTeachers' isAll = "true" bookName="manualForTeachers" bookType='excel'>教师指南</a></li>
+
+				     </ul>
+				</li>
+				<li><a href="#">佛教<span class="trig"></span></a>
+					<ul id="practices">
+						<li><a href="#">出境首页</a></li>
+						<li><a href="#">当地玩乐</a></li>
+
+					</ul>
+				</li>
+				<li><a href="#">心理学<span class="trig"></span></a>
+					<ul id="physical">
+						<li><a href="#">国内长途</a></li>
+						<li><a href="#">周边跟团</a></li>
+						<li><a href="#">周边跟团</a></li>
+
+					</ul></li>
+				<li><a href="#">视频<span class="trig"></span></a>
+					<ul id="tv">
+						<li><a href="#">出境首页1</a></li>
+						<li><a href="#">游轮111</a></li>
+						<li><a href="#">出境首页</a></li>
+					</ul></li>
+				<li><a href="#">音频<span class="trig"></span></a>
+					<ul id="radio">
+						<li><a href="#">出境首页</a></li>
+						<li><a href="#">当地玩乐</a></li>
+					</ul></li>
+
+
+			</ul>
+
+
+		</div>
+		<!--  end  global_header -->
+
+		<div class="wz_context">
+
+			<div class="miracle-context-catalog" id="catalog"></div>
+			<!-- end miracle-context-catalog -->
+			<div class="miracle-context-chapter" id="context">
+				<div class="miracle-context-chapter-pages"></div>
+
+			</div>
+		</div>
+		<!-- end wz_context -->
+
+
+		<!-- 圆形菜单 -->
+		<div id='ss_menu'>
+			<div><i class="fa fa-qq"></i></div>
+			<div><i class="fa fa-weibo"></i></div>
+			<div><i class="fa fa-weixin"></i></div>
+			<div><i class="fa fa-renren"></i></div>
+			<div class='menu'>
+				<div class='share' id='ss_toggle' data-rot='180'>
+					<div class='circle'></div>
+					<div class='bar'></div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<link rel='stylesheet' href="../../statics/css/style.default.css" th:href="@{/css/style.default.css}" type='text/css'></link>
+	<link rel='stylesheet' href="../../statics/css/css/jquery-ui-1.10.3" th:href="@{/css/jquery-ui-1.10.3}" type='text/css'></link>
+	<link rel='stylesheet' href="../../statics/css/jquery.gritter.css" th:href="@{/css/jquery.gritter.css}" type='text/css'></link>
+	<link rel='stylesheet' href="../../statics/js/ymPrompt/skin/qq/ymPrompt.css" th:href="@{/js/ymPrompt/skin/qq/ymPrompt.css}" type='text/css'></link>
+	<link rel='stylesheet' href="../../statics/css_wz/miracles.css" th:href="@{/css_wz/miracles.css}" type='text/css'></link>
+
+	<link rel='stylesheet' href="../../statics/css_wz/styles.css" th:href="@{/css_wz/styles.css}" type='text/css'></link>
+
+
+	<script type="text/javascript"  src="../../statics/js/jquery/jquery-1.11.1.min.js" th:src="@{/js/jquery/jquery-1.11.1.min.js}" > </script>
+	<script type="text/javascript"  src='../../statics/js/jquery/jquery-ui-1.10.3.min.js' th:src="@{/js/jquery/jquery-ui-1.10.3.min.js}" > </script>
+	<script type="text/javascript"  src='../../statics/js/jquery/bootstrap.min.js' th:src="@{/js/jquery/bootstrap.min.js}" > </script>
+	<script type="text/javascript"  src='../../statics/js/jquery/jquery.datatables.min.js' th:src="@{/js/jquery/jquery.datatables.min.js}" > </script>
+	<script type="text/javascript"  src='../../statics/js/jquery/jquery.gritter.min.js' th:src="@{/js/jquery/jquery.gritter.min.js}" > </script>
+	<script type="text/javascript"  src='../../statics/js/pub_js/wz_util.js' th:src="@{/js/js_pub/wz_util.js}" > </script>
+	<script type="text/javascript"  src='../../statics/js/ymPrompt/ymPrompt.js' th:src="@{/js/ymPrompt/ymPrompt.js}" > </script>
+
+
+
+
+	<script type="text/javascript"  src='../js/js_view/framework/main.js' th:src="@{/js/js_view/framework/main.js}" ></script>
+	<script type="text/javascript" src="../js/js_view/acim/acim.js" th:src="@{/js/js_view/acim/acim.js}"></script>
+
+
+</body>
+</html>
