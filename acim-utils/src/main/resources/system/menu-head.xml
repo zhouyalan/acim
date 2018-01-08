@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+   menu 菜单
+
+-->
+
+
+<menu>
+
+    <menu title="首页" isHasSubMenu="no"> </menu>
+       <menu  title = '奇迹课程' isHasSubMenu="yes">
+            <menu title="课程内容" id="miracles" isHasSubMenu="no">
+                <option title="正文"  id='miracles_text' isAll="true" bookName ='miracles_text' bookType='excel'> </option>
+                <option title = '练习' id="miracles_bookwork" isAll ="true" bookName='miracles_bookwork' bookType='excel'> </option>
+                <option title="教师指南" id='miracles_manualForTeachers' isAll = "true" bookName="manualForTeachers" bookType='excel'> </option>
+            </menu>
+            <menu title="课程相关" id="relmiracles" isHasSubMenu="no">
+                 <option title="葛瑞"> </option>
+                 <option title="肯恩"> </option>
+                 <option title="小飞虫"> </option>
+                 <option title="了了"> </option>
+            </menu>
+    </menu>
+
+</menu>

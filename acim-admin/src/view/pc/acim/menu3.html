@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>tree menu by jiarry</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script language="Javascript" type="text/Javascript">
+
+function showhide_obj(obj,icon)
+{
+obj=document.getElementById(obj);
+icon=document.getElementById(icon);
+ 
+
+ if (obj.style.display=="none")
+ { 
+    div_list = document.getElementsByTagName("div");
+    for (i=0; i< div_list.length; i ++) {
+        thisDiv = div_list[i];
+        if(thisDiv.id.indexOf("title")!=-1 && thisDiv.id != "title_first" && thisDiv.id != "title_all")//当文档div中的id含有list时,与charAt类似;
+        {
+            thisDiv.style.display="none";//循环把所有菜单链接都隐藏起来
+        }
+    }
+ 
+   myfont=document.getElementsByTagName("font");
+   for(i=0;i<myfont.length;i++)
+   {
+    thisfont = myfont[i];
+    if(thisfont.id.indexOf("icon")!=-1 && icon.id!=icon)
+    {  
+        thisfont.innerHTML="+";
+    }
+   }
+    icon.innerHTML="-";
+    obj.style.display=""; //只显示当前链接
+}
+ else
+  {//假如当前对象是打开的，就关闭它;
+   icon.innerHTML="+";
+   obj.style.display="none";
+   }
+ }
+
+function set_initialization(obj,img)
+{//设置初始状态,打开一个层;
+   obj.style.display="";
+   img.src="images/icon/minus.gif";
+   }
+
+function show_this(obj)
+{
+obj=document.getElementById(obj);
+if (obj.id==obj.id)
+{
+   blinkicon=document.getElementsByTagName("font");
+   for(x=0;x<blinkicon.length;x++)
+    {
+    if( blinkicon[x].id.indexOf("select")!=-1 && obj.id!=obj )
+      {
+       blinkicon[x].innerHTML=" ";
+      }
+    }
+      obj.innerHTML="&gt;";
+ }
+ else
+ {
+       obj.innerHTML=" ";
+ }
+}
+function showhide_all(div_id)
+{
+    obj=document.getElementById(div_id);
+    if(obj.style.display=="none")
+        obj.style.display="";
+    else
+        obj.style.display="none";
+}
+</script>
+<style type="text/css">
+span{ width:100px;Height:25px;margin-left:15px;}
+font{font-weight:bold;}
+body,td{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;color:#333333;}
+div{cursor:default;border-top:1px solid gray ; border-left:1px solid gray ;border-right:1px solid gray ;background-color:#D3F7FE ;width:120px;}
+pre{background-color:#FFFFF1; border:1px solid gray;color:blue;font-family:verdana;Arial;padding:20px;}
+</style>
+</head>
+
+<body>
+<div style="line-height:25px;" id="title_first" onClick="showhide_all('title_all')"><font id='icon_all'>+</font>所有栏目</div>
+<div style="line-height:25px;" id="title_all">
+<div style="line-height:25px;" OnClick="showhide_obj('title1','icon1')"><font id='icon1'>+</font>栏目一</div>
+<div id="title1"  style="background-color:#fffff3;line-height:22px;display:none;">
+<span id=menu1_1 onMouseOver="this.style.backgroundColor='blue'" OnMouseOut="this.style.backgroundColor=''" Onclick="show_this('select1_1')"><font id='select1_1'></font>菜单一</span></font><br />
+<span id="menu1_2" Onclick="show_this('select1_2')"><font id='select1_2'></font>菜单二</span></font><br />
+<span id="menu1_3" Onclick="show_this('select1_3')"><font id='select1_3'></font>菜单三</span></font><br />
+</div>
+<div style="line-height:25px;" OnClick="showhide_obj('title2','icon2')"><font id='icon2'>+</font>栏目二</div>
+<div id="title2" style="background-color:#fffff3;line-height:22px;display:none;">
+<span id=m"enu2_1" Onclick="show_this('select2_1')"><font id='select2_1'></font>菜单一</span></font><br />
+<span id="menu2_2" Onclick="show_this('select2_2')"><font id='select2_2'></font>菜单二</span></font><br />
+<span id="menu2_3" Onclick="show_this('select2_3')"><font id='select2_3'></font>菜单三</span></font><br />
+</div>
+<div style="line-height:25px;" OnClick="showhide_obj('title3','icon3')"><font id='icon3'>+</font>栏目三</div>
+<div id="title3" style="background-color:#fffff3;line-height:22px;display:none;">
+<span id=menu3_1 Onclick="show_this('select3_1')"><font id='select3_1'></font>菜单一</span></font><br />
+<span id=menu3_2 Onclick="show_this('select3_2')"><font id='select3_2'></font>菜单二</span></font><br />
+<span id=menu3_3 Onclick="show_this('select3_3')"><font id='select3_3'></font>菜单三</span></font><br />
+</div>
+<div style="line-height:25px;" OnClick="showhide_obj('title4','icon4')"><font id='icon4'>+</font>栏目四</div>
+<div id="title4" style="background-color:#fffff3;line-height:22px;display:none;">
+<span id=menu4_1 Onclick="show_this('select4_1')"><font id='select4_1'></font>菜单一</span></font><br />
+<span id=menu4_2 Onclick="show_this('select4_2')"><font id='select4_2'></font>菜单二</span></font><br />
+<span id=menu4_3 Onclick="show_this('select4_3')"><font id='select4_3'></font>菜单三</span></font><br />
+<span id=menu4_4 Onclick="show_this('select4_4')"><font id='select4_4'></font>菜单三</span></font><br />
+<span id=menu4_5 Onclick="show_this('select4_5')"><font id='select4_5'></font>菜单三</span></font><br />
+<span id=menu4_6 Onclick="show_this('select4_6')"><font id='select4_6'></font>菜单三</span></font><br />
+</div>
+</div>
+</body>
+</html>

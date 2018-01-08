@@ -1,0 +1,102 @@
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body{
+	background: #494A5F;
+	color: #D5D6E2;
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
+}
+a{ color: rgba(255, 255, 255, 0.6);outline: none;text-decoration: none;-webkit-transition: 0.2s;transition: 0.2s;}
+a:hover,a:focus{color:#74777b;text-decoration: none;}
+
+.global_header{
+	position:fixed;
+	color:#fff;
+	top:50px;
+	heigth:auto;
+	width:80%;
+	margin-right: 10%;
+	z-index: 90;
+}
+
+
+.navbar-brand{
+	padding: 29px 15px;
+	height: auto;
+}
+nav.navbar.bootsnav{
+	border: none;
+	margin-bottom: 150px;
+}
+.navbar-nav{
+	float: left;
+}
+nav.navbar.bootsnav ul.nav > li > a{
+	color: #474747;
+	text-transform: uppercase;
+	padding: 30px;
+}
+nav.navbar.bootsnav ul.nav > li:hover{
+	background: #f4f4f4;
+}
+.nav > li:after{
+	content: "";
+	width: 0;
+	height: 5px;
+	background: #34c9dd;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: all 0.5s ease 0s;
+}
+.nav > li:hover:after{
+	width: 100%;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+	content: "+";
+	font-family: 'FontAwesome';
+	font-size: 16px;
+	font-weight: 400;
+	position: absolute;
+	top: 35%;
+	right: 10%;
+	transition: all 0.4s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{
+	content: "\f105";
+	transform: rotate(90deg);
+}
+.dropdown-menu.multi-dropdown{
+	position: absolute;
+	left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	border: none;
+}
+@media only screen and (max-width:990px){
+	nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after,
+	nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{ content: " "; }
+	.dropdown-menu.multi-dropdown{ left: 0 !important; }
+	nav.navbar.bootsnav ul.nav > li:hover{ background: transparent; }
+	nav.navbar.bootsnav ul.nav > li > a{ margin: 0; }
+}

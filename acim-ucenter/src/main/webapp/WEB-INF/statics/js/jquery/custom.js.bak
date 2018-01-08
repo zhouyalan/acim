@@ -1,0 +1,264 @@
+jQuery(document).ready(function() {
+	
+  $('#dateFrom , #dateTo').datepicker();
+	$('#dateFrom , #dateTo').datepicker("option","dateFormat","yy-mm-dd");
+	
+	
+	var showtime = 1000;
+   
+   // Toggle Left Menu
+   jQuery('.leftpanel .nav-parent > a').live('click', function() {
+      
+      var parent = jQuery(this).parent();
+      var sub = parent.find('> ul');
+      
+      // Dropdown works only when leftpanel is not collapsed
+      if(!jQuery('body').hasClass('leftpanel-collapsed')) {
+         if(sub.is(':visible')) {
+            sub.slideUp(200, function(){
+               parent.removeClass('nav-active');
+               jQuery('.mainpanel').css({height: ''});
+               adjustmainpanelheight();
+            });
+         } else {
+            closeVisibleSubMenu();
+            parent.addClass('nav-active');
+            sub.slideDown(200, function(){
+               adjustmainpanelheight();
+            });
+         }
+      }
+      return false;
+   });
+   
+   function closeVisibleSubMenu() {
+      jQuery('.leftpanel .nav-parent').each(function() {
+         var t = jQuery(this);
+         if(t.hasClass('nav-active')) {
+            t.find('> ul').slideUp(200, function(){
+               t.removeClass('nav-active');
+            });
+         }
+      });
+   }
+   
+   function adjustmainpanelheight() {
+      // Adjust mainpanel height
+      var docHeight = jQuery(document).height();
+      if(docHeight > jQuery('.mainpanel').height())
+         jQuery('.mainpanel').height(docHeight);
+   }
+   adjustmainpanelheight();
+   
+   // Add class everytime a mouse pointer hover over it
+   jQuery('.nav-bracket > li').hover(function(){
+      jQuery(this).addClass('nav-hover');
+   }, function(){
+      jQuery(this).removeClass('nav-hover');
+   });
+   
+   
+   // Menu Toggle
+   jQuery('.menutoggle').click(function(){
+      
+      var body = jQuery('body');
+      var bodypos = body.css('position');
+      
+      if(bodypos != 'relative') {
+         
+         if(!body.hasClass('leftpanel-collapsed')) {
+            body.addClass('leftpanel-collapsed');
+            jQuery('.nav-bracket ul').attr('style','');
+            
+            jQuery(this).addClass('menu-collapsed');
+            
+         } else {
+            body.removeClass('leftpanel-collapsed chat-view');
+            jQuery('.nav-bracket li.active ul').css({display: 'block'});
+            
+            jQuery(this).removeClass('menu-collapsed');
+            
+         }
+      } else {
+         
+         if(body.hasClass('leftpanel-show'))
+            body.removeClass('leftpanel-show');
+         else
+            body.addClass('leftpanel-show');
+         
+         adjustmainpanelheight();         
+      }
+
+   });
+   
+   //公用方法
+   var zpy_pro = {
+		tabCheck:function(){
+			var checkDom = $("input.checkSimple:checked").length;
+			if(checkDom==0){
+				
+				jQuery.gritter.add({
+							title: '提示信息!',
+							text: '请选择一条数据！',
+					    class_name: 'growl-info',
+					    image: '../images/screen.png',
+					    position: 'center',
+							sticky: false,
+							time: showtime
+	       });
+			//	$("#alert_system .modal-title").text("请选择一条数据！");
+			//	$("#alert_system").modal("show");
+				return false;
+			}else if(checkDom>1){
+				
+				jQuery.gritter.add({
+							title: '提示信息!',
+							text: '只能选择一条数据！',
+					    class_name: 'growl-info',
+					    image: '../images/screen.png',
+					    position: 'center',
+							sticky: false,
+							time: showtime
+	       });
+			//	$("#alert_system .modal-title").text("只能选择一条数据！");
+			//	$("#alert_system").modal("show");
+				return false;
+			}
+			return true;
+		}
+	};
+	
+	   // 保存成功，修改成功，删除成功，提示信息。     
+    $(".submit_save").on("click", function(e){     	 	
+		   jQuery.gritter.add({
+							title: '提示信息!',
+							text: '保存成功！',
+					    class_name: 'growl-info',
+					    image: '../images/screen.png',
+					    position: 'center',
+							sticky: false,
+							time: showtime
+	       });
+	 });
+	
+
+  
+  
+   $(".submit_update").click(function(){  
+     			jQuery.gritter.add({
+							title: '提示信息!',
+							text: '修改成功！',
+					    class_name: 'growl-info',
+					    image: '../images/screen.png',
+					    position: 'bottom-right',  
+							sticky: false,
+							time: showtime
+	       });
+  });
+  
+  $(".submit_delete").click(function(){
+     			jQuery.gritter.add({
+							title: '提示信息!',
+							text: '删除成功！',
+					    class_name: 'growl-info',
+					    image: '../images/screen.png',
+					    position: 'bottom-right',  
+							sticky: false,
+							class_name: 'gritter-success',
+							time: showtime
+	       });
+  });
+  
+    $(".submit_fenpei").click(function(){    		
+  	 	var checkDom = $("input.checkSimple2:checked").length;
+				if(checkDom==0){
+					  jQuery.gritter.add({
+							title: '提示信息!',
+							text: '请至少选择一条数据！',
+					    class_name: 'growl-info',
+					    image: '../images/screen.png',
+					    position: 'center',
+							sticky: false,
+							time: showtime
+							
+	       });	       
+	       return false;
+	     }
+				else{
+					jQuery.gritter.add({
+							title: '提示信息!',
+							text: '分配策略成功！',
+					    class_name: 'growl-info',
+					    image: '../images/screen.png',
+					    position: 'bottom-right',  
+							sticky: false,
+							time: showtime
+	       });
+				}
+  });
+  
+   
+   //更多查询
+	$("#moreSearch").on("click",function(e) {
+		var hasShow = $(this).attr("show");
+        if(hasShow=="false"){
+			$(this).attr("show","true");
+			$(this).find(".textDom").text("收起");
+			$(this).find(".glyphicon").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+			$("#moreSearchDom").show();
+		}else{
+			$(this).attr("show","false");
+			$(this).find(".textDom").text("更多");
+			$(this).find(".glyphicon").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+			$("#moreSearchDom").hide();
+		}
+    });
+ 
+    
+    
+    
+   //编辑，删除，重置密码是否勾选数据验证
+	$(".updateBtn").on("click", function(e){
+		if(zpy_pro.tabCheck()){
+			$("#alert_update").modal("show");
+		}
+	});
+	
+	$(".delBtn").on("click", function(e){
+		if(zpy_pro.tabCheck()){
+			$("#alert_del").modal("show");
+		}
+	});
+	$(".updatePassBtn").on("click", function(e){
+		if(zpy_pro.tabCheck()){
+			jQuery.gritter.add({
+							title: '提示信息!',
+							text: '重置密码成功！',
+					    class_name: 'growl-info',
+					    image: 'images/screen.png',
+					    position: 'center',
+							sticky: false,
+							time: showtime
+	       });
+			
+			//$("#alert_system .modal-title").text("重置密码成功！");
+//$("#alert_system").modal("show");
+		}
+	});
+	
+	//全选
+	$("input.checkAll").on("change",function(e){
+		var checkSimple = $(this).parents("table").find("input.checkSimple");
+		if($(this).is(":checked")){
+			checkSimple.attr("checked","checked");
+		}else{
+			checkSimple.removeAttr("checked");
+		}
+	});
+	
+	
+	$(window).scroll(function(){//滚动时触发函数
+        $("#zhiShuInfo").css("top",$(window).scrollTop() + $(window).height()-50); });//将滚动条高度赋给悬浮框。
+    //  $("#div1").css("top",$(window).scrollTop()+50 ); });//将滚动条高度赋给悬浮框。
+
+});

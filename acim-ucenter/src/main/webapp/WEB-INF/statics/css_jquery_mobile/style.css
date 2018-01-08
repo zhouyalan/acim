@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+/*body {*/
+    /*background: #2a2b30;*/
+/*}*/
+
+.swiper-container {
+    /*border: #E63F00 solid 1px;*/
+    position:fixed;
+    top:-5px;
+    width: 103%;
+    height: 150px;
+    margin: auto 0px auto 0px;
+    z-index: -1;
+
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+.searchBar{
+
+    width:80%;
+    heigth:50px;
+    text-align:center;
+    margin-left:5%;
+    margin-right:15%;
+    font-size: 14px;
+    position:fixed;
+    top:5px;
+    z-index: 1;
+
+
+    border-radius: 20px;
+    border: 1px solid #999;
+    background-color: #FFFFFF;
+}
+
+
+
+.searchBar input{
+    text-indent: 10px;
+    height: 1.8rem;
+    line-height: 1.9rem;
+    width: 90%;
+    border:none;
+    outline: none;
+}
+
+.searchBar i{
+    position: relative;
+    top:1Px;
+
+
+    color: #B2B2B2;
+}
+
+.main_context_menuBar{
+
+    position:absolute;
+    top:154px;
+    margin-left: 0px;
+    heigth:50px;
+    width:100%;
+    margin-right:0px;
+
+
+}
+
+.main_context_menuBar ul{
+    list-style: none;
+    float:left;
+    width:100%;
+    height:100%;
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    /*border: #E63F00 solid 1px;*/
+    background-color: #eeeeee;
+}
+
+.main_context_menuBar ul li  {
+
+    text-decoration: none;
+    color: #666666;
+    float:left;
+    text-align: center;
+    width:25%;
+    font-size: 15px;
+    height: 100%;
+    line-height: 50px;
+    border:none;
+    marigin:0px auto 0px auto;
+    /*border-right: #45bb8d solid 1px;*/
+}
+
+.main_context_menuBar li:hover {
+    color:#E63F00;
+    border-bottom: #E63F00 solid 1px;
+}
+
+
+.main_context_iphone {
+    position: relative;
+    top: 50px;
+    overflow: auto;
+    margin-left: 20px;
+    /*height:200px;*/
+    width: 100%;
+    /*border: #E63F00 solid 1px;*/
+    /*}*/
+}
+
+.miracles_book table{
+    width:98%;
+    border-bottom: solid #eeeeee 1px;
+    margin-right:1%;
+    margin-bottom: 8px;
+}
+
+.miracles_book table tr td:first-child{
+    width:20%;
+    /*border-right: solid #eeeeee 1px;*/
+    marigin-left:0px;
+    text-align: center;
+    /*background: url("../images_mobile/book.jpeg") no-repeat;*/
+    background-size:60px 68px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    background-position: 7px 2px;
+    height:70px;
+}
+
+.miracles_book p{
+    /*border: solid #eeeeee 1px;*/
+    margin-top:2px;
+    margin-bottom: 2px;
+}
+
+
+.book_function ul{
+    list-style: none;
+    /*border: solid #eeeeee 1px;*/
+    text-align: center;
+    margin-bottom: 0px ;
+    margin-top:0px;
+    margin-right:20px;
+    color: #4b6fb0;
+    font-size: 16px;
+    heigth:30px;
+}
+
+
+.book_function li:last-child{
+    padding-top: 10px ;
+}
+
+.book_function li:first-child {
+    padding-bottom: 10px;
+}
+
+.book_mid{
+    padding-left: 13px;
+}
+
+.miracles_book table tr td:last-child{
+    width:30%;
+    text-align: right;
+    padding-right: 10px;
+    /*border: solid #eeeeee 1px;*/
+}
+.book_name{
+    font-size:16px;
+    color:red;
+}
+
+.book_image2 {
+    width: 75px;
+    height: 71px;
+
+}
+
+.book_recommend {
+    margin-bottom:5px;
+    color: #333333;
+    font-size:14px;
+}
+
+
+
+
+.footer{
+    background:#074C52;
+    position: fixed;
+    bottom: 0px;
+    left:0px;
+    height:55px;
+    width:100%;
+    margin-left:0px;
+}
+
+.footer ul{
+    list-style: none;
+    padding-left:0px;
+    float:left;
+    width:100%;
+    height:100%;
+    margin-top: 0px;
+
+
+
+}
+.footer ul li  {
+    text-decoration: none;
+    color: #fffceb;
+    float:left;
+    text-align: center;
+    width:19%;
+    font-size: 13px;
+    height: 100%;
+    border:none;
+    marigin:0px auto 0px auto;
+    /*border-right: #eee solid 1px;*/
+}
+
+.footer ul li i{
+
+    font-size: 25px;
+}
+
+
+
+.footer ul li:last-child {
+    border:none;
+
+}
+
+.footer ul li  table{
+    text-align: center;
+    /*border: #ffffff solid 1px;*/
+    width:100%;
+}
+.footer ul li table tr:last-child{
+    margin-top: -5px;
+
+}
+
+.footer ul li a hover{
+
+}
+
+
+.main_context{
+    position:fixed;;
+    top:50px;
+}
+
+/* */
